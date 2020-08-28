@@ -8,10 +8,6 @@ if len(sys.argv)-1:
 #########################################################
  
 randval= random.randint(1,5)
-if len(new_fortune)==0:
-  wait(2)
-elif len(new_fortune)>0:
-  replace(random.randint(1,5),random.randint(1,6))
 
 
 print("You crack open your cookie and your fortune falls out: \n ")
@@ -29,11 +25,11 @@ elif randval==3:
 elif randval==4:
   print("You will read this and say \"Geez! I could come up with better fortunes than that!\"\n")
   new_fortune= input("what would you like to come up with? (put a 1 at the end of what you add please):\n")
-  filter(int(new_fortune))
-  if len(new_fortune):
+  filter(new_fortune, int)
+  if int(new_fortune)!=1:
     print("\n, well I'm sure your full of bright ideas. Better luck next time")
   else:
-    replace(random.randint(1,5),random.randint(1,6))
+    re.replace(random.randint(1,5),random.randint(1,6))
 elif randval==5:
   print("This cookie is never gonna give you up, never gonna let you down.\n")
   sec_val= int(input("\n\nDo you wanna get rickrolled?(1 for yes or 2 for no):"))
@@ -44,9 +40,14 @@ elif randval==5:
   elif sec_val==2:
     print("Tis a bummer m8, but have you a jolly good day!")
 eek = random.randint(7,12)
-elif len(new_fortune)!=0:
-  print(new_fortune)
-  
+colon_replace= ":"
+randnumber1= random.randint(1,99)
+randnumber2= random.randint(1,99)
+randnumber3= random.randint(1,99)
+randnumber4= random.randint(1,99)
+randnumber5= random.randint(1,99)
+randnumber6= random.randint(1,99)
+print(f"\nHere are you lucky numbers{colon_replace}\n{randnumber1} {randnumber2} {randnumber3} {randnumber4} {randnumber5} {randnumber6}")
 if eek==7:
   print("\nAdios")
 elif eek==8:
