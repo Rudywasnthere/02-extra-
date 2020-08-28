@@ -12,6 +12,7 @@ randval= random.randint(1,5)
 
 print("You crack open your cookie and your fortune falls out: \n ")
 
+F_emoticon= ":/"
   
 if randval==1:
   print("Help! I’m being held prisoner in a fortune cookie bakery!\n")
@@ -24,12 +25,8 @@ elif randval==3:
   print("xD")
 elif randval==4:
   print("You will read this and say \"Geez! I could come up with better fortunes than that!\"\n")
-  new_fortune= input("what would you like to come up with? (put a 1 at the end of what you add please):\n")
-  filter(new_fortune, int)
-  if int(new_fortune)!=1:
-    print("\n, well I'm sure your full of bright ideas. Better luck next time")
-  else:
-    re.replace(random.randint(1,5),random.randint(1,6))
+  input("What would you like to come up with?\n")
+  print(f"\nWell I'm sure your full of bright ideas. Its a bummer I don't have a system for users imputting new fortunes yet {F_emoticon}")
 elif randval==5:
   print("This cookie is never gonna give you up, never gonna let you down.\n")
   sec_val= int(input("\n\nDo you wanna get rickrolled?(1 for yes or 2 for no):"))
